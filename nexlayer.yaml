@@ -1,0 +1,14 @@
+application:
+  name: jaeger
+  pods:
+  - name: app
+    image: jaegertracing/all-in-one:latest
+    path: /
+    servicePorts:
+    - 16686
+    vars:
+      COLLECTOR_OTLP_ENABLED: "true"
+    volumes:
+    - name: jaeger-data
+      mountPath: /tmp
+      size: 5Gi
