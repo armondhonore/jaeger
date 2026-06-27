@@ -2,7 +2,7 @@ application:
   name: jaeger
   pods:
   - name: app
-    image: jaegertracing/all-in-one:latest
+    image: mirror.gcr.io/jaegertracing/all-in-one:1.62.0
     path: /
     servicePorts:
     - 16686
